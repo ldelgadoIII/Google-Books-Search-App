@@ -7,7 +7,8 @@ const BookCard = ({ title, authors, description, image, link }) => {
             title: title,
             authors: authors,
             description: description,
-            image: image
+            image: image,
+            link: link
         })
     }
 

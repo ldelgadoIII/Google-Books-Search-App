@@ -5,11 +5,17 @@ import axios from "axios"
 // set res to state
 // map state
 
-const Saved = () => {
+const Saved = () => { 
     useEffect(() => {
-      axios.get("/api/books")
+      getSavedBooks();
         
     }, [])
+
+    const getSavedBooks = async () => {
+        const { data } = await axios.get("/api/books");
+
+        console.log("Saved Data: ", data )
+    }
 
     return (
         <>
