@@ -8,7 +8,7 @@ router.get("/api/books", (req, res) => {
 });
 
 router.post("/api/books", (req, res) => {
-  db.Book.insert(req.body)
+  db.Book.create(req.body)
     .then(book => res.json(book))
     .catch(err => res.status(422).end());
 });
