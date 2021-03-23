@@ -14,8 +14,9 @@ router.post("/api/books", (req, res) => {
 });
 
 // add delete route
-router.post("/api/books/:id", (req, res) => {
-  db.Book.delete(req.params.id)
+router.delete("/api/books/:id", (req, res) => {
+  db.Book.findById({ _id: req.params.id})
+    .then(book => book.remove())
     .then(book => res.json(book))
     .catch(err => res.status(422).end());
 });
