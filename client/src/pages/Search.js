@@ -46,7 +46,11 @@ const Search = () => {
             {search ? books.map(({ volumeInfo: { title, authors, description, imageLinks, infoLink } }) => 
                 <BookCard title={title} authors={authors} description={description} image={imageLinks.thumbnail} link={infoLink}/>
             ) 
-            : <h1>No Results To Display</h1>}
+            : 
+            <div class="container" style={{ paddingTop: "20px" , paddingBottom: "50px"}}>
+                <h1>No Results To Display</h1>
+            </div>
+            }
           </ResultsSection>
         </>
         

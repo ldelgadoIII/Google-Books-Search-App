@@ -9,13 +9,13 @@ const SavedBook = ({ id, title, authors, link, image, description }) => {
     return (
         <div class="container">
             <div class="row">
-                <div class="col-md-12 rounded shadow-lg p-4" id={id}>
+                <div class="col-md-12 rounded shadow-lg p-4 result-card" id={id}>
                 <h3>Title: {title}</h3>
                 <h4>Author: {authors}</h4>
                 <a href={link} target="\_blank">
-                  <button>View</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0">View</button>
                 </a>
-                <button onClick={() => removeBook(id)}>Remove</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" onClick={() => removeBook(id)}>Remove</button>
                 <hr />
                 <div class="row">
                     <div class="col-md-12">

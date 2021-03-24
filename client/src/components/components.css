@@ -28,3 +28,12 @@
     margin-top: 15px;
     margin-bottom: 15px;
 }
+
+a {
+    color: white !important;
+}
+
+.nav {
+    box-shadow: 0px 0px 10px black;
+    margin-bottom: 20px;
+}

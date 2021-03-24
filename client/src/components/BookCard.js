@@ -19,9 +19,9 @@ const BookCard = ({ title, authors, description, image, link }) => {
                 <h3>Title: {title}</h3>
                 <h4>Author: {authors}</h4>
                 <a href={link} target="\_blank">
-                  <button>View</button>
+                  <button class="btn btn-outline-success my-2 my-sm-0">View</button>
                 </a>
-                <button onClick={saveCard}>Save</button>
+                <button class="btn btn-outline-success my-2 my-sm-0" onClick={saveCard}>Save</button>
                 <hr />
                 <div class="row">
                     <div class="col-md-12">

@@ -21,9 +21,11 @@ const Saved = () => {
 
     return (
         <>
-         <h1>Saved Books Page</h1>
-         {savedBooks ? savedBooks.map(({ _id, title, authors, description, image, link }) => 
-            <SavedBook id={_id} title={title} authors={authors} description={description} image={image} link={link}/>
+          <div class="page-title" style={{ marginLeft: "20px", marginTop: "20px"}}>
+            <h1>Saved Books Page</h1>
+          </div>
+          {savedBooks ? savedBooks.map(({ _id, title, authors, description, image, link }) => 
+          <SavedBook id={_id} title={title} authors={authors} description={description} image={image} link={link}/>
           ) 
           : <h1>No Results To Display</h1>}
         </>
