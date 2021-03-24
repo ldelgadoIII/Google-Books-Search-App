@@ -1,9 +1,10 @@
 import React from 'react'
 
-const ResultsSection = () => {
+const ResultsSection = ({ children }) => {
     return (
-        <div>
+        <div class="results">
           <h3>Results</h3>
+          {children}
         </div>
     )
 }

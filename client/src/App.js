@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import NavBar from "./components/NavBar"
 import Search from "./pages/Search"
 import Saved from  "./pages/Saved"
+import './index.css';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <NavBar />
         <Route exact path="/" component={Search} />
         <Route exact path="/books" component={Saved} />
-    </div>
+      </div>
     </Router>
   );
 }

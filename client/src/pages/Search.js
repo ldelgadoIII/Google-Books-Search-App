@@ -3,6 +3,7 @@ import axios from "axios"
 import SearchBar from "../components/SearchBar"
 import ResultsSection from "../components/ResultsSection"
 import BookCard from "../components/BookCard"
+import "../components/components.css"
 
 const Search = () => {
     const [books, setBooks] = useState([]);
@@ -30,7 +31,7 @@ const Search = () => {
     return (
         <>
           <SearchBar />
-          <div>
+          <div class="search-bar text-center">
           <form>
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search" style={{ width: "80%", display: "inline" }}
                 onChange={(e) => setSearch(e.target.value)}
@@ -41,11 +42,12 @@ const Search = () => {
                 </button>
             </form>
           </div>
-          <ResultsSection/>
-          {search ? books.map(({ volumeInfo: { title, authors, description, imageLinks, infoLink } }) => 
-            <BookCard title={title} authors={authors} description={description} image={imageLinks.thumbnail} link={infoLink}/>
-          ) 
-          : <h1>No Results To Display</h1>}
+          <ResultsSection>
+            {search ? books.map(({ volumeInfo: { title, authors, description, imageLinks, infoLink } }) => 
+                <BookCard title={title} authors={authors} description={description} image={imageLinks.thumbnail} link={infoLink}/>
+            ) 
+            : <h1>No Results To Display</h1>}
+          </ResultsSection>
         </>
         
     )
