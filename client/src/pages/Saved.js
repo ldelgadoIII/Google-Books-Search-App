@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react'
 import axios from "axios"
 import SavedBook from "../components/SavedBook"
 
-// map state
-
 const Saved = () => { 
     const [savedBooks, setSavedBooks] = useState([]);
 
